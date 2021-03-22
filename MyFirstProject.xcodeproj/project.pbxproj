@@ -13,7 +13,7 @@
 		E65BEDD025F7872F0041FD9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65BEDCE25F7872F0041FD9C /* Main.storyboard */; };
 		E65BEDD225F787360041FD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65BEDD125F787360041FD9C /* Assets.xcassets */; };
 		E65BEDD525F787360041FD9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65BEDD325F787360041FD9C /* LaunchScreen.storyboard */; };
-		E67092242608BEA7008061FF /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = E65BEDDD25F7D4470041FD9C /* fonts */; };
+		E67092282608E8A7008061FF /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = E67092272608E8A7008061FF /* fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		E65BEDD125F787360041FD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E65BEDD425F787360041FD9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E65BEDD625F787360041FD9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E65BEDDD25F7D4470041FD9C /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../fonts; sourceTree = "<group>"; };
+		E67092272608E8A7008061FF /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		E65BEDC725F7872F0041FD9C /* MyFirstProject */ = {
 			isa = PBXGroup;
 			children = (
-				E65BEDDD25F7D4470041FD9C /* fonts */,
+				E67092272608E8A7008061FF /* fonts */,
 				E65BEDC825F7872F0041FD9C /* AppDelegate.swift */,
 				E65BEDCA25F7872F0041FD9C /* SceneDelegate.swift */,
 				E65BEDCC25F7872F0041FD9C /* ViewController.swift */,
@@ -130,7 +130,7 @@
 				E65BEDD525F787360041FD9C /* LaunchScreen.storyboard in Resources */,
 				E65BEDD225F787360041FD9C /* Assets.xcassets in Resources */,
 				E65BEDD025F7872F0041FD9C /* Main.storyboard in Resources */,
-				E67092242608BEA7008061FF /* fonts in Resources */,
+				E67092282608E8A7008061FF /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
