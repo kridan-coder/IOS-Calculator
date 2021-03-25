@@ -28,6 +28,7 @@ class ViewController: UIViewController {
             updateUILabel(currValue)
         }
     }
+    
     @IBAction func clearButton(_ sender: UIButton) {
         clear(wasDividedByZero: false)
     }
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
         operation = .nothing
         updateUILabel(currValue)
     }
+    
     @IBAction func equalButton(_ sender: UIButton) {
         switch operation
         {
@@ -58,12 +60,13 @@ class ViewController: UIViewController {
         case .nothing:
             return
         }
+        
         oldValue = "0"
         operation = Operation.nothing
+        
         updateUILabel(currValue)
     }
     @IBAction func operationButton(_ sender: UIButton) {
-        
         operation = Operation(rawValue: sender.currentTitle!) ?? .nothing
         
         if (oldValue != "0")
@@ -84,7 +87,6 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func digitButton(_ sender: UIButton) {
-        
         if (currValue == "0")
         {
             currValue = sender.currentTitle!
@@ -103,10 +105,10 @@ class ViewController: UIViewController {
     // this func was created because "1" should be converted to " 1" for better UI
     func updateUILabel(_ newValue: String){
         var result = ""
-        
         var currIteration = 0
         var spacesAdded = 0
         var currIndex = newValue.startIndex
+        
         while (currIteration != newValue.count)
         {
             if (newValue[currIndex] == "1")
@@ -114,20 +116,19 @@ class ViewController: UIViewController {
                 result.append(" ")
                 spacesAdded += 1
             }
+            
             result.append(newValue[currIndex])
             currIteration += 1
             currIndex = newValue.index(newValue.startIndex, offsetBy: currIteration)
         }
+        
         if (newValue.count > 8)
         {
             result = String(result.prefix(8 + spacesAdded))
         }
-        numberLabel.text = result
         
+        numberLabel.text = result
     }
-    
-    
-    
     
     func setButtonShadows(buttons: [UIButton])
     {
@@ -152,17 +153,16 @@ class ViewController: UIViewController {
         case .nothing:
             return
         }
+        
         currValue = "0"
-        updateUILabel(oldValue)    }
+        updateUILabel(oldValue)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setButtonShadows(buttons: buttonCollection)
-        
-        
     }
-    
-    
 }
 
 extension UIButton {
