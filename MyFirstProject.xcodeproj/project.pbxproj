@@ -13,7 +13,9 @@
 		E65BEDD025F7872F0041FD9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65BEDCE25F7872F0041FD9C /* Main.storyboard */; };
 		E65BEDD225F787360041FD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65BEDD125F787360041FD9C /* Assets.xcassets */; };
 		E65BEDD525F787360041FD9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65BEDD325F787360041FD9C /* LaunchScreen.storyboard */; };
-		E67092282608E8A7008061FF /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = E67092272608E8A7008061FF /* fonts */; };
+		E67092312608F07D008061FF /* museo.otf in Resources */ = {isa = PBXBuildFile; fileRef = E670922E2608F07D008061FF /* museo.otf */; };
+		E67092322608F07D008061FF /* montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E670922F2608F07D008061FF /* montserrat.ttf */; };
+		E67092332608F07D008061FF /* digital.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E67092302608F07D008061FF /* digital.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		E65BEDD125F787360041FD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E65BEDD425F787360041FD9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E65BEDD625F787360041FD9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E67092272608E8A7008061FF /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		E670922E2608F07D008061FF /* museo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = museo.otf; path = MyFirstProject/fonts/museo.otf; sourceTree = SOURCE_ROOT; };
+		E670922F2608F07D008061FF /* montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = montserrat.ttf; path = MyFirstProject/fonts/montserrat.ttf; sourceTree = SOURCE_ROOT; };
+		E67092302608F07D008061FF /* digital.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = digital.ttf; path = MyFirstProject/fonts/digital.ttf; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 		E65BEDC725F7872F0041FD9C /* MyFirstProject */ = {
 			isa = PBXGroup;
 			children = (
-				E67092272608E8A7008061FF /* fonts */,
+				E670922C2608F043008061FF /* fonts */,
 				E65BEDC825F7872F0041FD9C /* AppDelegate.swift */,
 				E65BEDCA25F7872F0041FD9C /* SceneDelegate.swift */,
 				E65BEDCC25F7872F0041FD9C /* ViewController.swift */,
@@ -68,6 +72,16 @@
 				E65BEDD625F787360041FD9C /* Info.plist */,
 			);
 			path = MyFirstProject;
+			sourceTree = "<group>";
+		};
+		E670922C2608F043008061FF /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E67092302608F07D008061FF /* digital.ttf */,
+				E670922F2608F07D008061FF /* montserrat.ttf */,
+				E670922E2608F07D008061FF /* museo.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,10 +141,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67092332608F07D008061FF /* digital.ttf in Resources */,
 				E65BEDD525F787360041FD9C /* LaunchScreen.storyboard in Resources */,
+				E67092322608F07D008061FF /* montserrat.ttf in Resources */,
 				E65BEDD225F787360041FD9C /* Assets.xcassets in Resources */,
+				E67092312608F07D008061FF /* museo.otf in Resources */,
 				E65BEDD025F7872F0041FD9C /* Main.storyboard in Resources */,
-				E67092282608E8A7008061FF /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

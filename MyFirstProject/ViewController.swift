@@ -11,10 +11,10 @@ class ViewController: UIViewController {
     
     var oldValue = "0"
     var currValue = "0"
-    var operation = Operation.Nothing
+    var operation = Operation.nothing
     
     enum Operation: String{
-        case Divide="÷", Multiply="x", Summarize="+", Substract="-", Remaind="%", Nothing=""
+        case divide="÷", multiply="x", summarize="+", substract="-", remaind="%", nothing=""
     }
     
     @IBOutlet var buttonCollection: [UIButton]!
@@ -33,50 +33,38 @@ class ViewController: UIViewController {
     }
     
     func clear(wasDividedByZero: Bool){
-        if (wasDividedByZero)
+        if wasDividedByZero
         {
             print("Division by zero is prohibited")
         }
         oldValue = "0"
         currValue = "0"
-        operation = Operation.Nothing
+        operation = .nothing
         updateUILabel(currValue)
     }
     @IBAction func equalButton(_ sender: UIButton) {
         switch operation
         {
-        case .Divide:
+        case .divide:
             (currValue == "0") ? clear(wasDividedByZero: true): (currValue = String(Double(oldValue)! / Double(currValue)!))
-        case .Multiply:
+        case .multiply:
             (currValue = String(Double(oldValue)! * Double(currValue)!))
-        case .Summarize:
+        case .summarize:
             (currValue = String(Double(oldValue)! + Double(currValue)!))
-        case .Substract:
+        case .substract:
             (currValue = String(Double(oldValue)! - Double(currValue)!))
-        case .Remaind:
+        case .remaind:
             (currValue = String(Double(oldValue)!.truncatingRemainder(dividingBy: Double(currValue)!)))
-        case .Nothing:
+        case .nothing:
             return
         }
         oldValue = "0"
-        operation = Operation.Nothing
+        operation = Operation.nothing
         updateUILabel(currValue)
     }
     @IBAction func operationButton(_ sender: UIButton) {
-        switch sender.currentTitle! {
-        case "÷":
-            operation = Operation.Divide
-        case "x":
-            operation = Operation.Multiply
-        case "+":
-            operation = Operation.Summarize
-        case "-":
-            operation = Operation.Substract
-        case "%":
-            operation = Operation.Remaind
-        default:
-            operation = Operation.Nothing
-        }
+        
+        operation = Operation(rawValue: sender.currentTitle!) ?? .nothing
         
         if (oldValue != "0")
         {
@@ -101,7 +89,7 @@ class ViewController: UIViewController {
         {
             currValue = sender.currentTitle!
         }
-        else if (numberLabel.text!.count < 8)
+        else if (currValue.count < 8)
         {
             currValue += sender.currentTitle ?? "0"
         }
@@ -117,53 +105,51 @@ class ViewController: UIViewController {
         var result = ""
         
         var currIteration = 0
+        var spacesAdded = 0
         var currIndex = newValue.startIndex
         while (currIteration != newValue.count)
         {
-            result.append(newValue[currIndex])
             if (newValue[currIndex] == "1")
             {
                 result.append(" ")
+                spacesAdded += 1
             }
+            result.append(newValue[currIndex])
             currIteration += 1
             currIndex = newValue.index(newValue.startIndex, offsetBy: currIteration)
         }
-        if (result.count > 8)
+        if (newValue.count > 8)
         {
-            result = String(result.prefix(8))
+            result = String(result.prefix(8 + spacesAdded))
         }
         numberLabel.text = result
         
     }
     
-    func basicDropShadow(button: UIButton){
-        button.layer.shadowColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
-        button.layer.shadowOffset = CGSize(width: 1.0, height: 2.0)
-        button.layer.shadowRadius = 2.0
-        button.layer.cornerRadius = 4.0
-    }
+    
+    
     
     func setButtonShadows(buttons: [UIButton])
     {
         for button in buttons{
-            basicDropShadow(button: button)
+            button.setButtonShadow()
         }
     }
     
     func stashResult(){
         switch operation
         {
-        case .Divide:
+        case .divide:
             (currValue == "0") ? clear(wasDividedByZero: true) : (oldValue = String(Double(oldValue)! / Double(currValue)!))
-        case .Multiply:
+        case .multiply:
             (oldValue = String(Double(oldValue)! * Double(currValue)!))
-        case .Summarize:
+        case .summarize:
             (oldValue = String(Double(oldValue)! + Double(currValue)!))
-        case .Substract:
+        case .substract:
             (oldValue = String(Double(oldValue)! - Double(currValue)!))
-        case .Remaind:
+        case .remaind:
             (oldValue = String(Double(oldValue)!.truncatingRemainder(dividingBy: Double(currValue)!)))
-        case .Nothing:
+        case .nothing:
             return
         }
         currValue = "0"
@@ -175,7 +161,16 @@ class ViewController: UIViewController {
         
         
     }
-
-
+    
+    
 }
 
+extension UIButton {
+    func setButtonShadow(){
+        layer.shadowOpacity = 1.0
+        layer.shadowColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        layer.shadowOffset = CGSize(width: -3.0, height: -4.0)
+        layer.shadowRadius = 6.0
+        layer.cornerRadius = 8.0
+    }
+}

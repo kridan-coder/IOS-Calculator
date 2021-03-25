@@ -313,8 +313,8 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" systemColor="systemGreenColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FlF-Rm-jxS">
-                                <rect key="frame" x="53.5" y="227" width="307" height="80.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FlF-Rm-jxS">
+                                <rect key="frame" x="76.5" y="227" width="261" height="80.5"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="69"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" systemColor="systemGreenColor"/>
@@ -329,10 +329,10 @@
                             <constraint firstItem="Oqf-CO-Jdb" firstAttribute="bottom" secondItem="QHi-Ay-vkc" secondAttribute="top" constant="-23" id="WfY-7v-MhX"/>
                             <constraint firstItem="h77-jf-Ezb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="998" constant="25" id="d0u-A7-Rcj"/>
                             <constraint firstItem="Oqf-CO-Jdb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="drf-AG-NBi"/>
-                            <constraint firstItem="FlF-Rm-jxS" firstAttribute="leading" secondItem="uow-Vq-AsO" secondAttribute="leading" id="fNY-cj-o1C"/>
+                            <constraint firstItem="FlF-Rm-jxS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uow-Vq-AsO" secondAttribute="leading" id="fNY-cj-o1C"/>
                             <constraint firstItem="uow-Vq-AsO" firstAttribute="centerY" secondItem="Oqf-CO-Jdb" secondAttribute="centerY" id="fZh-yW-X8a"/>
                             <constraint firstItem="QHi-Ay-vkc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fpj-iT-2fU"/>
-                            <constraint firstItem="FlF-Rm-jxS" firstAttribute="trailing" secondItem="uow-Vq-AsO" secondAttribute="trailing" id="iJm-KA-JgZ"/>
+                            <constraint firstItem="FlF-Rm-jxS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uow-Vq-AsO" secondAttribute="trailing" id="iJm-KA-JgZ"/>
                             <constraint firstItem="QHi-Ay-vkc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="ks4-g1-LDG"/>
                             <constraint firstItem="h77-jf-Ezb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="vih-ef-rsq"/>
                             <constraint firstItem="uow-Vq-AsO" firstAttribute="centerX" secondItem="Oqf-CO-Jdb" secondAttribute="centerX" id="xJO-i2-pdY"/>
